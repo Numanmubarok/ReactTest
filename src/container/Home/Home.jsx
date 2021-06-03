@@ -1,8 +1,19 @@
 import React, {Component} from 'react'
-import YouTubeComp from '../../YoutubeComp/YouTubeComp';
-import Product from '../Product/Product';
+import LifeCycleComp from '../../component/LifeCycleComp/LifeCycleComp';
+// import YouTubeComp from '../../YoutubeComp/YouTubeComp';
+// import Product from '../Product/Product';
 
 class Home extends Component {
+    state = {
+        showComponent: true
+    }
+    componentDidMount () {
+        setTimeout(() => {
+            this.setState({
+                showComponent: false
+            })
+        },5000)
+    }
     render (){
         return(
             <div>
@@ -25,9 +36,17 @@ class Home extends Component {
             desc="ini deskripsi 4"
             />
             <YouTubeComp/> */}
-            <p>Counter</p>
+            {/* <p>Counter</p>
             <hr/>
-            <Product/>
+            <Product/> */}
+            <p>LifeCyce Component</p>
+            <hr/>
+            { 
+            this.state.showComponent
+            ?
+            <LifeCycleComp/>
+            : null
+            }
             </div>
             
             

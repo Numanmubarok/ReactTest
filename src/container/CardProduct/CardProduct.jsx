@@ -5,20 +5,22 @@ class CardProduct extends Component {
     state={
         order: 5
     }
-    handleCounter = () +>{
-        this.props onCounter(5)
+    handleCounter = (newValue) =>{
+        this.props.onCounter(newValue)
     }
     handlePlus = () => {
         this.setState({
             order: this.state.order +1
+        }, ()=>{
+            this.handleCounter(this.state.order);
         })
-
-        this.handleCounter
-    }
+    } 
     handleMinus = () =>{
         if(this.state.order > 0){
             this.setState({
                 order: this.state.order -1
+            }, ()=>{
+                this.handleCounter(this.state.order);
             })            
         }
     }

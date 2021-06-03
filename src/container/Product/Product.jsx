@@ -23,7 +23,7 @@ class Product extends Component {
                         <div className="count">{this.state.order}</div>
                     </div>
                 </div>
-                <CardProduct onCounter={()=> this.handleCounter()}/>
+                <CardProduct onCounter={(value)=> this.handleCounter(value)}/>
             </Fragment>
         )
     }
