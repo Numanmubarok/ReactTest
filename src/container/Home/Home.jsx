@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
-import LifeCycleComp from '../../component/LifeCycleComp/LifeCycleComp';
+// import LifeCycleComp from '../../component/LifeCycleComp/LifeCycleComp';
+import BlogPost from '../BlogPost/BlogPost';
 // import YouTubeComp from '../../YoutubeComp/YouTubeComp';
 // import Product from '../Product/Product';
 
@@ -8,11 +9,11 @@ class Home extends Component {
         showComponent: true
     }
     componentDidMount () {
-        setTimeout(() => {
-            this.setState({
-                showComponent: false
-            })
-        },5000)
+        // setTimeout(() => {
+        //     this.setState({
+        //         showComponent: false
+        //     })
+        // },5000)
     }
     render (){
         return(
@@ -39,14 +40,17 @@ class Home extends Component {
             {/* <p>Counter</p>
             <hr/>
             <Product/> */}
-            <p>LifeCyce Component</p>
+            {/* <p>LifeCyce Component</p>
             <hr/>
             { 
             this.state.showComponent
             ?
             <LifeCycleComp/>
             : null
-            }
+            } */}
+            <p>Blog Post</p>
+            <hr/>
+            <BlogPost/>
             </div>
             
             
